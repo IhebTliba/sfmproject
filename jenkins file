@@ -15,6 +15,13 @@ pipeline{
               echo'test'
             }
           }
+          stage("Nexus")
+          {
+            steps
+            { sh """mvn deploy""";
+              echo'nexus'
+            }
+          }
 
           
          
